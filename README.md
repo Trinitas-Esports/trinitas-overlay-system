@@ -48,6 +48,7 @@ Now you should reach the overlay at http://localhost:3000
 | `displayScore` | `int, int` | Displays score to HTML elements with `.score#<blue\|orange>` |
 | `displayClock` | `int, int, boolean` | Displays clock to HTML element with .clock.time#clock` |
 | `displayPlayer` | `player` | Displays player data of current target to HTML element with `.target#<data>` |
+| `displayAdditionalPlayerinfo` | `player` | Displays boost and speed to HTML element with `.additionalhud .target#<data>` |
 | `diplayBoost` | `int, int` | Displays boost and speed to HTML element with `.target#<boost\|speed>` |
 
 
