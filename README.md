@@ -8,13 +8,13 @@ This repo is a custom live coverage overlay for RL Esport broadcasts using the B
 #### Clone the project
 
 ```bash
-  git clone https://github.com/IsaaacQINH/trinitas-new-overlay
+  git clone https://github.com/IsaaacQINH/trinitas-overlay-system
 ```
 
 #### Go to the project directory
 
 ```bash
-  cd trinitas-new-overlay
+  cd trinitas-overlay-system
 ```
 
 #### Install dependencies
