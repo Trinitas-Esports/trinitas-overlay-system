@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Trinitas Overlay</title>
+</head>
+
+<body>
+    <div class="overlay" id="ingame">
+        <div class="scoreboard">
+            <!-- Get data from configurator -->
+            <div class="teamname" id="blue"></div>
+            <div class="series" id="blue"></div>
+            <div class="teamname" id="orange"></div>
+            <div class="series" id="orange"></div>
+            <div class="matchinfo" id="title"></div>
+            <div class="matchinfo" id="format"></div>
+            <div class="matchinfo" id="week"></div>
+            <!-- Get data over websocket -->
+            <div class="clock time" id="clock">5:00</div>
+            <div class="score" id="blue">0</div>
+            <div class="score" id="orange">0</div>
+        </div>
+        <div class="targethud">
+            <div class="target" id="name"></div>
+            <div class="target" id="goals"></div>
+            <div class="target" id="assists"></div>
+            <div class="target" id="saves"></div>
+            <div class="target" id="shots"></div>
+            <div class="additionalhud">
+                <div class="target" id="score"></div>
+                <div class="target" id="demos"></div>
+                <div class="target" id="touches"></div>
+                <div class="target" id="cartouches"></div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="moderation">
+        <div class="caster-overlay">
+            <div class="caster-name" id="caster1-name">Test1</div>
+            <div class="caster-name" id="caster2-name">Test2</div>
+        </div>
+    </div>
+    <div class="overlay" id="postgame">
+        <h1>Postgame-Overlay</h1>
+    </div>
+    <script defer src="https://apis.google.com/js/api.js"></script>
+    <script defer src="/js/websocketsubscriber.js"></script>
+    <script defer src="/js/configurator.js"></script>
+    <script defer src="/js/overlay.js"></script>
+    <script defer src="/js/main.js"></script>
+</body>
+
+</html>

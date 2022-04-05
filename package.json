@@ -1,0 +1,19 @@
+{
+  "name": "trinitas-new-overlay",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "src/app.js",
+  "bin": "src/app.js",
+  "scripts": {
+    "test": "nodemon .",
+    "start": "node .",
+    "build": "pkg -o build/ -t node16-win ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "path": "^0.12.7"
+  }
+}
