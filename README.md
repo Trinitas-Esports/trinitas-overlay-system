@@ -28,7 +28,7 @@ This repo is a custom live coverage overlay for RL Esport broadcasts using the B
 Create a file `.env` in projet root directory.
 All required Environment variables are in `.env.example`.
 Contact [@isaaacqinh](https://www.github.com/isaaacqinh) (Discord: isaâac#0001)
-to get production .env
+to get production `.env
 
 Start the server
 
