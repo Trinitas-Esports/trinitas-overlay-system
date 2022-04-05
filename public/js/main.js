@@ -28,9 +28,19 @@ WsSubber.subscribe('game', 'update_state', (d) => {
     );
 
     if (d.game.hasTarget) {
-        // Display player HUD
+        // Set targethud to display
+        if ($('.targethud').css('display') === 'none') {
+            $('.targethud').css('display', 'block');
+        }
+
+        // Set data of targethud elements
         YrkOverlay.displayPlayer(
             d.players[d.game.target]
         );
+    }
+    else {
+        if ($('.targethud').css('display') === 'block') {
+            $('.targethud').css('display', 'none');
+        }
     }
 });

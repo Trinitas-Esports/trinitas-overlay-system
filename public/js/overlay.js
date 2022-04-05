@@ -15,7 +15,6 @@ const YrkOverlay = {
     },
     displayPlayer: function (player) {
         $('.target#name').text(player.name);
-        $('.target#score').text(player.score);
         $('.target#goals').text(player.goals);
         $('.target#assists').text(player.assists);
         $('.target#saves').text(player.saves);
@@ -23,7 +22,14 @@ const YrkOverlay = {
 
         YrkOverlay.displayBoost(player.speed, player.boost);
     },
+    displayAdditionalPlayerinfo: function (player) {
+        $('.additionalhud .target#score').text(player.score);
+        $('.additionalhud .target#demos').text(player.demos);
+        $('.additionalhud .target#touches').text(player.touches);
+        $('.additionalhud .target#cartouches').text(player.cartouches);
+    },
     displayBoost: function (speed, boost) {
-        console.log(speed, boost);
+        $('.boostmeter .target#speed').text(speed + ' kph');
+        $('.boostmeter .target#boost').text(boost);
     }
 };

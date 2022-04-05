@@ -114,7 +114,7 @@ function startInterval(_interval, spreadsheetId) {
       if (interval !== settings[1].values[0][1] * 1000) {
         interval = settings[1].values[0][1] * 1000;
         clearInterval(intervalID);
-        startInterval(settings[1].values[0][1] * 1000);
+        startInterval(settings[1].values[0][1] * 1000, spreadsheetId);
       }
 
       if (settings[0].values[0][1].toLowerCase() === "ingame") {
