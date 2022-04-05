@@ -38,6 +38,13 @@ Start the server
 
 Now you should reach the overlay at http://localhost:3000
 
+#### Control Overlay with spreadsheet
+
+You can configure the overlay with following spreadsheet
+[Trinitas Esport - Overlay Configuration Datasheet](https://docs.google.com/spreadsheets/d/1VgPhZ4L-0XMchWVfIO8MGahwGlJ04QgBof5XE3boqAQ/edit#gid=0)
+
+Note: If not authorized, message [@isaaacqinh](https://www.github.com/isaaacqinh) (Discord: isaâac#0001)
+
 
 ## Reference
 
@@ -50,8 +57,6 @@ Now you should reach the overlay at http://localhost:3000
 | `displayPlayer` | `player` | Displays player data of current target to HTML element with `.target#<data>` |
 | `displayAdditionalPlayerinfo` | `player` | Displays boost and speed to HTML element with `.additionalhud .target#<data>` |
 | `diplayBoost` | `int, int` | Displays boost and speed to HTML element with `.target#<boost\|speed>` |
-
-
 
 ## Authors
 
