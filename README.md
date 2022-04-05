@@ -27,6 +27,8 @@ This repo is a custom live coverage overlay for RL Esport broadcasts using the B
 
 Create a file `.env` in projet root directory.
 All required Environment variables are in `.env.example`.
+Contact [@isaaacqinh](https://www.github.com/isaaacqinh) (Discord: isaâac#0001)
+to get production .env
 
 Start the server
 
@@ -43,7 +45,7 @@ Now you should reach the overlay at http://localhost:3000
 You can configure the overlay with following spreadsheet
 [Trinitas Esport - Overlay Configuration Datasheet](https://docs.google.com/spreadsheets/d/1VgPhZ4L-0XMchWVfIO8MGahwGlJ04QgBof5XE3boqAQ/edit#gid=0)
 
-Note: If not authorized, message [@isaaacqinh](https://www.github.com/isaaacqinh) (Discord: isaâac#0001)
+Note: If not authorized, contact [@isaaacqinh](https://www.github.com/isaaacqinh) (Discord: isaâac#0001)
 
 
 ## Reference
