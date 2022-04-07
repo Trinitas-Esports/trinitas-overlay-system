@@ -1,8 +1,17 @@
-require('dotenv').config();
-const express = require('express');
 const path = require('path');
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+else {
+    const dotenv = require('dotenv').config({
+        path: path.join(__dirname, '../.env')
+    });
+}
+
+const express = require('express');
 
 const app = express();
+const port = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -17,6 +26,6 @@ app.get("/env", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("App listening on port: 3000");
+app.listen(port, () => {
+    console.log("App listening on port: " + port);
 });

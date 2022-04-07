@@ -1,12 +1,12 @@
 const YrkOverlay = {
-    state: 'none',
+    state: {},
     displayScore: function (blueScore, orangeScore) {
         $('.score#blue').text(blueScore);
         $('.score#orange').text(orangeScore);
     },
     displayClock: function (sec, ms, isOT) {
-        let posInString = (!isOT && sec < 60) ? 17 : 15;
-        let time = (isOT ? '+' : '') +
+        const posInString = (!isOT && sec < 60) ? 17 : 15;
+        const time = (isOT ? '+' : '') +
                     (new Date(ms * 1000))
                         .toISOString()
                         .substring(posInString, posInString + 4);
@@ -31,5 +31,23 @@ const YrkOverlay = {
     displayBoost: function (speed, boost) {
         $('.boostmeter .target#speed').text(speed + ' kph');
         $('.boostmeter .target#boost').text(boost);
+    },
+    displayPlayerCams: function (player) {},
+    playStinger: function (delay) {},
+    setLocalStorage: function (key, value) {
+        localStorage.setItem(key, JSON.stringify(value))
+    },
+    getLocalStorageByKey: function (key) {
+        try {
+            YrkOverlay.state = JSON.parse(localStorage.getItem(key));
+        }
+        catch (e) {
+            throw e;
+        }
+    },
+    removeLocalStorageByKey: function (key) {
+        if (localStorage.getItem(key) !== undefined) {
+            localStorage.removeItem(key);
+        }
     }
 };

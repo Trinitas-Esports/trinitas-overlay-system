@@ -1,13 +1,19 @@
 {
-  "name": "trinitas-new-overlay",
+  "name": "trinitas-overlay-system",
   "version": "1.0.0",
   "description": "---",
   "main": "src/app.js",
   "bin": "src/app.js",
   "scripts": {
     "test": "nodemon .",
-    "start": "node .",
-    "build": "pkg -o build/ -t node16-win ."
+    "start": "NODE_ENV=production node .",
+    "build": "pkg ."
+  },
+  "pkg": {
+    "assets": [
+        "public/**/*"
+    ],
+    "output": "dist"
   },
   "author": "",
   "license": "ISC",

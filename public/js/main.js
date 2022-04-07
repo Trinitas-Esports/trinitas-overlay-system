@@ -14,6 +14,7 @@ WsSubber.init('localhost', 49122, false, [
 ]);
 
 WsSubber.subscribe('game', 'update_state', (d) => {
+    YrkOverlay.state = d;
     //Display Score on Scoreboard
     YrkOverlay.displayScore(
         d.game.teams[0].score, 
@@ -43,4 +44,10 @@ WsSubber.subscribe('game', 'update_state', (d) => {
             $('.targethud').css('display', 'none');
         }
     }
+});
+
+WsSubber.subscribe('game', 'match_ended', (d) => {
+    console.log(YrkOverlay.state);
+
+    YrkOverlay.setLocalStorage('players', YrkOverlay.state.players);
 });
