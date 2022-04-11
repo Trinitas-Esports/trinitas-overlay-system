@@ -22,7 +22,7 @@ let interval = 5000;
 
 const getEnv = async () => {
   const res = await fetch('http://localhost:3000/env');
-  const json = res.json();
+  const json = await res.json();
 
   return json;
 }

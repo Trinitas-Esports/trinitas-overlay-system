@@ -10,7 +10,7 @@ WsSubber.subscribe('ws', 'open', function () {
 
 WsSubber.init('localhost', 49122, false, [
     'game:update_state',
-    'yrk:heartbeat'
+    'yrk:heartbeat',
 ]);
 
 WsSubber.subscribe('game', 'update_state', (d) => {
@@ -50,4 +50,8 @@ WsSubber.subscribe('game', 'match_ended', (d) => {
     console.log(YrkOverlay.state);
 
     YrkOverlay.setLocalStorage('players', YrkOverlay.state.players);
+});
+
+WsSubber.subscribe('config', 'settings', (d) => {
+    console.log(d);
 });
