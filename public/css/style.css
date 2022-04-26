@@ -6,24 +6,3 @@ body {
 .overlay {
   display: none;
 }
-
-#moderation {
-  background: #100e4b;
-}
-
-.caster-overlay {
-  width: 1920px;
-  height: 1080px;
-  background-image: url("/assets/r22.01/moderation_duo.png");
-}
-
-.caster-name {
-  position: absolute;
-  top: 735px;
-  left: 330px;
-  width: 425px;
-  height: 80px;
-
-  text-align: center;
-  vertical-align: center;
-}

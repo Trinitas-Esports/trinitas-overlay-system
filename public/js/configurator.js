@@ -14,6 +14,7 @@ const settingsRanges = [
   "G14:G15", //Szene
   "G20:G21", //Updaterate
   "G23:G24", //Emergency
+  "G25:G26"
 ];
 
 let intervalID;
@@ -117,6 +118,8 @@ function startInterval(_interval, spreadsheetId) {
         startInterval(settings[1].values[0][1] * 1000, spreadsheetId);
       }
 
+      loadRevisionContents(settings[3].values[0][1]);
+
       if (settings[0].values[0][1].toLowerCase() === "ingame") {
         $(".overlay#ingame").css("display", "block");
         $(".overlay#moderation").css("display", "none");
@@ -137,4 +140,27 @@ function startInterval(_interval, spreadsheetId) {
     }
     prev = checkSum[0][0];
   }, _interval);
+}
+
+function loadRevisionContents(revision) {
+  loadStyles(revision);
+  loadAssets(revision);
+}
+
+function loadStyles(revision) {
+  const isDev = revision.endsWith('dev');
+  const cssRef = $('link')[0];
+  cssRef.setAttribute('rel', 'stylesheet');
+  cssRef.setAttribute('type', 'text/css');
+  cssRef.setAttribute('href', `/${isDev ? revision.slice(0, -3) : revision}/css/style${isDev ? '_dev': ''}.css`);
+
+  $('.dev').text(revision);
+
+  if (typeof cssRef != 'undefined') {
+    $('head')[0].appendChild(cssRef);
+  }
+}
+
+function loadAssets(revision) {
+
 }
